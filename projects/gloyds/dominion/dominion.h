@@ -138,6 +138,9 @@ int playCouncilRoom(struct gameState* state, int currentPlayer, int handPos);
 int playSmithy(struct gameState* state, int currentPlayer, int handPos);
 /* Play the council room card and edit the game state as necessary */
 
+int playAmbassador(struct gameState* state, int currentPlayer, int handPos, int choice1, int choice2);
+/* Play the council room card and edit the game state as necessary */
+
 int playTreasureMap(struct gameState* state, int currentPlayer, int handPos);
 /* Play the council room card and edit the game state as necessary */
 
