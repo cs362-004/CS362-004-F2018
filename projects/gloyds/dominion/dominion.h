@@ -132,4 +132,13 @@ int playAdventurer(struct gameState* state, int currentPlayer, int* temphand, in
 /* Play the adventurer card and edit the 
    game state as necessary */
 
+int playCouncilRoom(struct gameState* state, int currentPlayer, int handPos);
+/* Play the council room card and edit the game state as necessary */
+
+int playSmithy(struct gameState* state, int currentPlayer, int handPos);
+/* Play the council room card and edit the game state as necessary */
+
+int playTreasureMap(struct gameState* state, int currentPlayer, int handPos);
+/* Play the council room card and edit the game state as necessary */
+
 #endif
