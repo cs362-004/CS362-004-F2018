@@ -200,7 +200,7 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
 
 
 ////////////////////////////////////////////Card function edits for assignment-2.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
+//Search name: Tacos / tacos
 //////////////////////////////////////Card function for Smithy\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 int cardSmithy(int handPos, int currentPlayer, struct gameState *state) //+3 Cards
 {
