@@ -199,12 +199,12 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
 }
 
 
-////////////////////////////////////////////Card function edits for assignment-2.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-//Search name: Tacos / tacos
-//////////////////////////////////////Card function for Smithy\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+////////////////////////////////////////////Card function edits for assignment-2.///////////////////////////////////////////////////////////////
+//Search name: Tacos / tacos / [Tacos] / [tacos]
+//////////////////////////////////////Card function for Smithy///////////////////////////////////////////////////////////////
 int cardSmithy(int handPos, int currentPlayer, struct gameState *state) //+3 Cards
 {
-  for (int i = 0; i < 3; i++)
+  for (int i = 0; i != 3; i++)
 	{
 	  drawCard(currentPlayer, state);
 	}
@@ -223,12 +223,12 @@ int cardVillage(int handPos, int currentPlayer, struct gameState *state) //+1 Ca
       state->numActions = state->numActions + 2;
 			
       //discard played card from hand
-      discardCard(handPos, currentPlayer, state, 0);
+      discardCard(handPos, currentPlayer, state, 1);
       return 0;
 }
 
 
-//////////////////////////////////////Card function for Adventurer\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////////////////Card function for Adventurer//////////////////////
 int cardAdventurer(int currentPlayer, struct gameState *state)
 {
   int z;
@@ -245,7 +245,7 @@ int cardAdventurer(int currentPlayer, struct gameState *state)
       drawntreasure++;
     else{
       temphand[z]=cardDrawn;
-      state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
+      state->handCount[currentPlayer]++; //this should just remove the top card (the most recently drawn one).
       z++;
     }
     }
@@ -256,7 +256,7 @@ int cardAdventurer(int currentPlayer, struct gameState *state)
     return 0;
   }
 
-//////////////////////////////////////Card function for Council Room\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////////////////Card function for Council Room//////////////////////
 int cardCouncil_room(int handPos, int currentPlayer, struct gameState *state)
 {
   //+4 Cards
@@ -269,7 +269,7 @@ int cardCouncil_room(int handPos, int currentPlayer, struct gameState *state)
   state->numBuys++;
 			
   //Each other player draws a card
-  for (int i = 0; i < state->numPlayers; i++)
+  for (int i = 1; i != state->numPlayers; i++)
 	{
 	  if ( i != currentPlayer )
 	    {
@@ -283,7 +283,7 @@ int cardCouncil_room(int handPos, int currentPlayer, struct gameState *state)
   return 0;
 }
 
-//////////////////////////////////////Card function for Feast\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////////////////Card function for Feast///////////////////////////////////////////////////////////////
 int cardFeast(int choice1, int currentPlayer, struct gameState *state)
 {
   int x;
@@ -340,7 +340,7 @@ int cardFeast(int choice1, int currentPlayer, struct gameState *state)
   return 0;
 
 }
-////////////////////////////////////////////Card function edits for assignment-2.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+////////////////////////////////////////////Card function edits for assignment-2.///////////////////////////////////////////////////////////////
 
 
 int shuffle(int player, struct gameState *state) {
