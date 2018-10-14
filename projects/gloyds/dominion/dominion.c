@@ -1198,7 +1198,7 @@ int updateCoins(int player, struct gameState *state, int bonus)
 
 int playAdventurer(struct gameState* state, int currentPlayer, int* temphand, int* z)
 {
-	int drawntreasure=0;
+	int drawntreasure;
 	int cardDrawn;
 
 	while(drawntreasure<2){
