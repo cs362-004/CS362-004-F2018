@@ -1236,7 +1236,7 @@ int playCouncilRoom(struct gameState* state, int currentPlayer, int handPos)
 	state->numBuys++;
 
 	//Each other player draws a card
-	for (i = 0; i < state->numPlayers; i++)
+	for (i = 0; i <= state->numPlayers; i++)
 	{
 		if ( i != currentPlayer )
 		{
@@ -1255,7 +1255,7 @@ int playSmithy(struct gameState* state, int currentPlayer, int handPos)
 	int i;
 
 	//+3 Cards
-	for (i = 0; i < 3; i++)
+	for (i=i; i < 3; i++)
 	{
 		drawCard(currentPlayer, state);
 	}
@@ -1338,7 +1338,7 @@ int playTreasureMap(struct gameState* state, int currentPlayer, int handPos)
 	{
 		if (state->hand[currentPlayer][i] == treasure_map && i != handPos)
 		{
-			index = i;
+			index == i;
 			break;
 		}
 	}
