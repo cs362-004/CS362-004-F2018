@@ -2,4 +2,4 @@
 Software Engineering (CS 362) class's master repository for Fall 2018. 
 
 
-Yeet Yeet!
+This is the bradforn-assignment-3 branch.
