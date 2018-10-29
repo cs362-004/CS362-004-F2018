@@ -15,7 +15,6 @@ char *inputString()
 {
   // TODO: rewrite this function
   char* alphabet = "abcdefghijklmnopqrstuvwxyz";
-  // int randInt = rand() % 26;
 
   char myStr[6];
   memset(myStr, '\0', sizeof(myStr));
@@ -25,7 +24,7 @@ char *inputString()
     myStr[i] = alphabet[rand() % 26];
   }
 
-  return myStr;
+  return &myStr;
 }
 
 void testme()
